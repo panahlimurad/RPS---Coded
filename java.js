@@ -1,18 +1,18 @@
 var compXod = [`k`, `t`, `m`]
 
-
-var player1Result = 0
-var player2Result = 0
+// hesablamaq
+var oyuncu1 = 0
+var oyuncu2 = 0
 
 var player1ResultPanel = document.querySelector(`#player1ResultPanel`)
 var player2ResultPanel = document.querySelector(`#player2ResultPanel`)
-
+// ekranda yazilan netice win draw
 var netice1 = document.querySelector('#player1')
 var netice2 = document.querySelector('#player2')
-
+// shekiller
 var playerFirstImg = document.querySelector('#player1Img')
 var playerSecondImg = document.querySelector('#player2Img')
-
+// oyuncu adlari
 var name = document.querySelector('#player1Name')
 var name = document.querySelector('#player2Name')
 
@@ -45,25 +45,25 @@ function startGame(e){
     if(userAttack === "t" && compAttack === "m"){
         console.log("User Win");
 
-        player1Result ++
+        oyuncu1++
 
-        player1ResultPanel.innerHTML = `Point : ${player1Result}`
+        player1ResultPanel.innerHTML = `Point : ${oyuncu1}`
 
         netice1.innerHTML = 'WIN'
         netice2.innerHTML = 'LOSE'
     }else if(userAttack === "k" && compAttack === "t"){
         console.log("User Win");
-        player1Result++
+        oyuncu1++
 
-        player1ResultPanel.innerHTML = `Point : ${player1Result}`
+        player1ResultPanel.innerHTML = `Point : ${oyuncu1}`
 
         netice1.innerHTML = 'WIN'
         netice2.innerHTML = 'LOSE'
     }else if(userAttack === "m" && compAttack === "k"){
         console.log("User Win");
-        player1Result++
+        oyuncu1++
 
-        player1ResultPanel.innerHTML = `Point : ${player1Result}`
+        player1ResultPanel.innerHTML = `Point : ${oyuncu1}`
 
           netice1.innerHTML = 'WIN'
         netice2.innerHTML = 'LOSE'
@@ -74,9 +74,9 @@ function startGame(e){
         netice2.innerHTML = 'DRAW'
     }else{
         console.log("Comp Win");
-        player2Result++
+        oyuncu2++
 
-        player2ResultPanel.innerHTML = `Point : ${player2Result}`
+        player2ResultPanel.innerHTML = `Point : ${oyuncu2}`
 
          netice1.innerHTML = 'LOSE'
         netice2.innerHTML = 'WIN'
